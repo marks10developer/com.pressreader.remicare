@@ -1,0 +1,6 @@
+framework module PressReader_SDK {
+  umbrella header "PressReader_SDK.h"
+
+  export *
+  module * { export * }
+}

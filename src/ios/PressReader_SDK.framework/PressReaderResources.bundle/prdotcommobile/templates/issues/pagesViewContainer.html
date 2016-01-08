@@ -1,0 +1,5 @@
+<div ui-pr-container-transform="container.transform" ui-pr-zoom-detection="container.setZoomDetectionCallback($zoomFn)" ui-pr-animate ui-pr-bounce-handler="container.bounceHandler($event)">
+    <div class="issue-page" style="position:absolute;top:0;left:0;background-color:black" ui-pr-collection="issuePage in pagesPool.pages() track by issuePage.index refresh on PAGES_COLLECTION_CHANGED" ui-pr-page-index="issuePage.index" ui-pr-transform="issuePage.container.transform" ui-pr-page-show="issuePage.isVisible" ui-pr-offset="issuePage.container.offset" ui-pr-page-animate>
+        <ui-pr-issue-page-images x-for="issuePage">
+    </div>
+</div>

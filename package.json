@@ -1,0 +1,17 @@
+{
+    "version": "1.0.0",
+    "name": "com.pressreader.remicare",
+    "cordova_name": "PressReader",
+    "description": "Pressreader library for remicare",
+    "license": "MIT",
+    "keywords": [],
+    "platforms": [
+        "ios"
+    ],
+    "engines": [
+        {
+            "name": "cordova",
+            "version": ">=1.0.0"
+        }
+    ]
+}

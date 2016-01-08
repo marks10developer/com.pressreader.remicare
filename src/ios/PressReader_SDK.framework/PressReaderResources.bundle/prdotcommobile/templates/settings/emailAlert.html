@@ -1,0 +1,15 @@
+<form role="form" ng-submit="ctrl.save()">
+    <div class="form-group">
+        <label>Search Term:</label>
+        <div class="">
+            <p class="form-control-static">{{ctrl.monitor.searchTerm}}</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="frequencyHours">Notification frequency: </label>
+        <select id="frequencyHours" ng-model="ctrl.monitor.frequencyHours" ng-options="key | int as frequency.name for (key, frequency) in ctrl.notificationFrequencies" required>
+        </select>
+        <!--k as v for (k,v) in-->
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+</form>
