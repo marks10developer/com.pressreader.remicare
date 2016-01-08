@@ -22,3 +22,5 @@
     
     [[PressReader instance] launch];
 }
+
+@end
