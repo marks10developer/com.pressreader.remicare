@@ -12,7 +12,8 @@
 
 @interface PRAppLaunchKit : CDVPlugin
 
-- (IBAction)launchPR:(id)sender;
+
+- (void)launchPR:(CDVInvokedUrlCommand*)command;
 
 @property (nonatomic, retain) IBOutlet UISwitch * removeAllContentSwitch;
 @end
