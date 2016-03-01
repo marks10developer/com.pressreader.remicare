@@ -23,10 +23,11 @@
         <param name="ios-package" value="PressReader" />
       </feature>
     </config-file>
-    
+    <source-file src="ios/libGoogleAnalyticsServices.a" framework="true" />
     <header-file src="src/ios/PRAppLaunchKit.h"/>
     <source-file src="src/ios/PRAppLaunchKit.m"/>
-     
+    
+    <source-file src="ios/libPRAppLaunch.a" framework="true" />
     <framework src="UIKit.framework" />
     <framework src="Foundation.framework" />
     <framework src="PressReader_SDK.framework" />
