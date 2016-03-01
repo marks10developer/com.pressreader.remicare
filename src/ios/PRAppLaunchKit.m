@@ -14,7 +14,8 @@
 
 - (void)launchPR:(CDVInvokedUrlCommand*)command
 {
- 
+    [PRAppLaunchKit defaultAppLaunch].subscriptionKey = @"d9d261747f4148aaad4d13b670a24129"; //please get one from api.pressreader.com assigned to your account
+    [self.launchButton setTitle:([[PRAppLaunchKit defaultAppLaunch] isAppInstalled] ? @"Open" : @"Install") forState:UIControlStateNormal];
 }
 
 - (void)viewDidLoad
@@ -25,8 +26,7 @@
     self.durationTextField.text = @"1";
     self.expirationCountdownLabel.hidden = YES;
 
-    //[PRAppLaunchKit defaultAppLaunch].subscriptionKey = @"d9d261747f4148aaad4d13b670a24129"; // please get one from api.pressreader.com assigned to your account
-    [self.launchButton setTitle:([[PRAppLaunchKit defaultAppLaunch] isAppInstalled] ? @"Open" : @"Install") forState:UIControlStateNormal];
+
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
