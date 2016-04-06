@@ -27,7 +27,7 @@
     <header-file src="src/ios/PRAppLaunchKit.h"/>
     <source-file src="src/ios/PRAppLaunchKit.m"/>
     
-    <source-file src="src/ios/libPRAppLaunch.a" framework="true" />
+    <source-file src="src/ios/libPRAppLaunchKit.a" framework="true" />
     <framework src="UIKit.framework" />
     <framework src="Foundation.framework" /> 
     <!--<framework src="CoreTelephony.framework"/>-->
