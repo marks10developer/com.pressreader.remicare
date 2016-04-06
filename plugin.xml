@@ -29,8 +29,7 @@
     
     <source-file src="src/ios/libPRAppLaunch.a" framework="true" />
     <framework src="UIKit.framework" />
-    <framework src="Foundation.framework" />
-    <framework src="PressReader_SDK.framework" />
+    <framework src="Foundation.framework" /> 
     <!--<framework src="CoreTelephony.framework"/>-->
   </platform>
 

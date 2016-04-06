@@ -1,8 +1,0 @@
-<div>
-    <ul class="nav nav-pills nav-stacked">
-        <li><a ui-sref="catalog.country({country: 'all'})">All Publications</a></li>
-        <li ng-repeat="country in ctrl.countries">
-            <a ui-sref="catalog.country({country: $index})">{{country.name}}</a>
-        </li>
-    </ul>
-</div>
