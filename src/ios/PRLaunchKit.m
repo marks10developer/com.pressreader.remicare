@@ -13,13 +13,10 @@
 
 @implementation PRLaunchKit
 
-- (void)launchPR:(CDVInvokedUrlCommand*)command
+- (void)launchPressReader:(CDVInvokedUrlCommand*)command
 {
     [PRLaunchKit defaultAppLaunch].subscriptionKey = @"d9d261747f4148aaad4d13b670a24129";
-    //[self.launchButton setTitle:([[PRLaunchKit defaultAppLaunch] isAppInstalled] ? @"Open" : @"Install") forState:UIControlStateNormal];
-}
-
-- (IBAction)launchPR:(id)sender {
+    
     NSDictionary * args = nil;
 
     NSInteger siteID = 8898;

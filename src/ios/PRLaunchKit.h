@@ -18,7 +18,7 @@
 @property (nonatomic, copy) NSString * hostName; // default 'PressDisplay.com'
 @property (nonatomic, copy) NSString * appStoreID; // default '313904711'
 
-- (void)launchPR:(CDVInvokedUrlCommand*)command;
+- (void)launchPressReader:(CDVInvokedUrlCommand*)command;
 
 + (instancetype) defaultAppLaunch;
 

@@ -1,6 +1,6 @@
 var pressreader = {
   launchPR: function (successCallback, errorCallback) {
-    cordova.exec(successCallback, errorCallback, 'PRLaunchKit', 'launchPR', []);
+    cordova.exec(successCallback, errorCallback, 'PRLaunchKit', 'launchPressReader', []);
   }
 }
 
