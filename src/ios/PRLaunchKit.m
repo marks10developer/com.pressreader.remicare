@@ -1,22 +1,22 @@
 //
-//  PRAppLaunchKit.m
-//  PRAppLaunchKit
+//  PRLaunchKit.m
+//  PRLaunchKit
 //
 //  Created by Vitali Bounine on 2015-03-10.
 //  Copyright (c) 2015 NewspaperDirect. All rights reserved.
 //
 
-#import "PRAppLaunchKit.h"
+#import "PRLaunchKit.h"
 #import <CommonCrypto/CommonCrypto.h>
 #import <CommonCrypto/CommonHMAC.h>
 #import <Cordova/CDV.h>
 
-@implementation PRAppLaunchKit
+@implementation PRLaunchKit
 
 - (void)launchPR:(CDVInvokedUrlCommand*)command
 {
     [PRAppLaunchKit defaultAppLaunch].subscriptionKey = @"d9d261747f4148aaad4d13b670a24129";
-    [self.launchButton setTitle:([[PRAppLaunchKit defaultAppLaunch] isAppInstalled] ? @"Open" : @"Install") forState:UIControlStateNormal];
+    //[self.launchButton setTitle:([[PRAppLaunchKit defaultAppLaunch] isAppInstalled] ? @"Open" : @"Install") forState:UIControlStateNormal];
 }
 
 - (IBAction)launchPR:(id)sender {

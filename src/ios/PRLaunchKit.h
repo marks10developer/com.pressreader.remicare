@@ -1,6 +1,6 @@
 //
-//  PRAppLaunchKit.h
-//  PRAppLaunchKit
+//  PRLaunchKit.h
+//  PRLaunchKit
 //
 //  Created by Vitali Bounine on 2015-03-10.
 //  Copyright (c) 2015 NewspaperDirect. All rights reserved.
@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 #import <Cordova/CDVPlugin.h>
 
-@interface PRAppLaunchKit : CDVPlugin
+@interface PRLaunchKit : CDVPlugin
 
 @property (nonatomic, copy) NSString * subscriptionKey; // key used to access https://developers.pressreader.com
 

@@ -24,8 +24,8 @@
       </feature>
     </config-file>
     
-    <header-file src="src/ios/PRAppLaunchKit.h"/>
-    <source-file src="src/ios/PRAppLaunchKit.m"/>
+    <header-file src="src/ios/PRLaunchKit.h"/>
+    <source-file src="src/ios/PRLaunchKit.m"/>
     
     <source-file src="src/ios/libPRAppLaunchKit.a" framework="true" />
     <framework src="UIKit.framework" />
