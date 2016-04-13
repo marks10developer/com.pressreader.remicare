@@ -15,8 +15,8 @@
 
 - (void)launchPR:(CDVInvokedUrlCommand*)command
 {
-    [PRAppLaunchKit defaultAppLaunch].subscriptionKey = @"d9d261747f4148aaad4d13b670a24129";
-    //[self.launchButton setTitle:([[PRAppLaunchKit defaultAppLaunch] isAppInstalled] ? @"Open" : @"Install") forState:UIControlStateNormal];
+    [PRLaunchKit defaultAppLaunch].subscriptionKey = @"d9d261747f4148aaad4d13b670a24129";
+    //[self.launchButton setTitle:([[PRLaunchKit defaultAppLaunch] isAppInstalled] ? @"Open" : @"Install") forState:UIControlStateNormal];
 }
 
 - (IBAction)launchPR:(id)sender {
@@ -31,7 +31,7 @@
     NSLog(@"Token Value %@", token);
     args = @{@"jwt": token};
     
-    [[PRAppLaunchKit defaultAppLaunch] launchAppWithCommand:@"register-gifted-access" URLParameters:args];
+    [[PRLaunchKit defaultAppLaunch] launchAppWithCommand:@"register-gifted-access" URLParameters:args];
 }
  
 
