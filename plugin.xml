@@ -15,7 +15,7 @@
     <engine name="cordova" version=">=1.0.0"/>
   </engines>
 
-  <js-module src="www/pressreader.js" name="PressReader">
+  <js-module src="www/pressreader.js" name="PRLaunchKit">
     <clobbers target="window.plugins.pressreader" />
   </js-module>
 
