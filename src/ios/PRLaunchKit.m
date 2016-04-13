@@ -17,8 +17,8 @@
 {
     NSDictionary * args = nil;
     NSInteger siteID = 8898;
-    NSString *secret = @"Secret";
-    NSString *giftID = @"Secret";
+    NSString *secret = @"secret_welcome1";
+    NSString *giftID = @"secret_welcome1";
     NSInteger duration = 24;
     NSString *token = [self giftedJwtWithId:giftID siteID:siteID duration:duration tokenExpiration:24 signingSecret:secret];
     args = @{@"jwt": token};
@@ -27,8 +27,6 @@
     
     [PRAppLaunchKit defaultAppLaunch].subscriptionKey = @"d9d261747f4148aaad4d13b670a24129";
     [[PRAppLaunchKit defaultAppLaunch] launchAppWithCommand:@"register-gifted-access" URLParameters:args];
-     //NSLog(@"Pressr %@", [[PRLaunchKit defaultAppLaunch] isAppInstalled] ? @"Open" : @"Install");
-    
 }
  
 
@@ -54,6 +52,5 @@
 
     return [@[signingInput, signingOutput] componentsJoinedByString:@"."];
 }
- 
- 
+
 @end
