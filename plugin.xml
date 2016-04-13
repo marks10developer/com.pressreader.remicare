@@ -22,8 +22,8 @@
   <!-- ios -->
   <platform name="ios">
     <config-file target="config.xml" parent="/*">
-      <feature name="PressReader">
-        <param name="ios-package" value="PressReader" />
+      <feature name="PRLaunchKit">
+        <param name="ios-package" value="PRLaunchKit" />
       </feature>
     </config-file>
     
