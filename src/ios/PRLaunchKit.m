@@ -7,9 +7,9 @@
 //
 
 #import "PRLaunchKit.h"
+#import <Cordova/CDV.h>
 #import <CommonCrypto/CommonCrypto.h>
 #import <CommonCrypto/CommonHMAC.h>
-#import <Cordova/CDV.h>
 
 @implementation PRLaunchKit
 

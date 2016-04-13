@@ -7,7 +7,10 @@
   <description>Pressreader library for remicare</description>
   <license>MIT</license>
   <keywords></keywords>
-
+  <keywords>Pressreader</keywords>
+  <repo>https://github.com/marks10developer/com.pressreader.remicare.git</repo>
+  <issue>https://github.com/marks10developer/com.pressreader.remicare/issues</issue>
+  
   <engines>
     <engine name="cordova" version=">=1.0.0"/>
   </engines>
