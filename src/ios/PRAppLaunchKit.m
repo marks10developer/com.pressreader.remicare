@@ -7,58 +7,33 @@
 //
 
 #import "PRAppLaunchKit.h"
-#import <PressReader_SDK/PressReader.h>
+#import <CommonCrypto/CommonCrypto.h>
+#import <CommonCrypto/CommonHMAC.h>
 #import <Cordova/CDV.h>
 
 @implementation PRAppLaunchKit
 
 - (void)launchPR:(CDVInvokedUrlCommand*)command
 {
-    [PRAppLaunchKit defaultAppLaunch].subscriptionKey = @"d9d261747f4148aaad4d13b670a24129"; //please get one from api.pressreader.com assigned to your account
+    [PRAppLaunchKit defaultAppLaunch].subscriptionKey = @"d9d261747f4148aaad4d13b670a24129";
     [self.launchButton setTitle:([[PRAppLaunchKit defaultAppLaunch] isAppInstalled] ? @"Open" : @"Install") forState:UIControlStateNormal];
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    self.durationTextField.enabled = NO;
-    self.durationTextField.text = @"1";
-    self.expirationCountdownLabel.hidden = YES;
-
-
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-    } else {
-        return YES;
-    }
-}
-
-- (IBAction)onStepperChanged:(UIStepper *)stepper
-{
-    self.durationTextField.text = [NSString stringWithFormat:@"%.0f", stepper.value];
 }
 
 - (IBAction)launchPR:(id)sender {
     NSDictionary * args = nil;
-    if (self.giftIDTextField.text.length && self.secretTextField.text.length) {
-        NSInteger siteID = self.siteIDTextField.text.integerValue ?: 8898;
-        NSString *secret = self.secretTextField.text;
-        NSString *giftID = self.giftIDTextField.text;
-        NSInteger duration = [self.durationTextField.text integerValue];
-        NSString *token = [self giftedJwtWithId:giftID siteID:siteID duration:duration tokenExpiration:24 signingSecret:secret];
 
-        args = @{@"jwt": token};
-    }
-
-     [[PRAppLaunchKit defaultAppLaunch] launchAppWithCommand:@"register-gifted-access" URLParameters:args];
+    NSInteger siteID = 8898;
+    NSString *secret = @"Secret";
+    NSString *giftID = @"Secret";
+    NSInteger duration = 24;
+    NSString *token = [self giftedJwtWithId:giftID siteID:siteID duration:duration tokenExpiration:24 signingSecret:secret];
+    args = @{@"jwt": token};
+    NSLog(@"Token Value %@", token);
+    args = @{@"jwt": token};
+    
+    [[PRAppLaunchKit defaultAppLaunch] launchAppWithCommand:@"register-gifted-access" URLParameters:args];
 }
-
-#pragma mark - Creating JWT utility methods
+ 
 
 - (NSData *)HS256SignPayload:(NSString *)theString withSecret:(NSString *)theSecret;
 {
@@ -83,11 +58,6 @@
     return [@[signingInput, signingOutput] componentsJoinedByString:@"."];
 }
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField
-{
-    [textField resignFirstResponder];
-    return YES;
-}
-
+ 
  
 @end
