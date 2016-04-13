@@ -12,14 +12,22 @@
 #import <UIKit/UIKit.h>
 
 @interface PRLaunchKit : CDVPlugin
+- (void)launchPressReader:(CDVInvokedUrlCommand*)command;
+@end
+
+
+
+//
+// Interface PRAppLaunchKit
+//
+
+@interface PRAppLaunchKit : NSObject
 
 @property (nonatomic, copy) NSString * subscriptionKey; // key used to access https://developers.pressreader.com
 
 @property (nonatomic, copy) NSString * scheme; // default 'PressReader'
 @property (nonatomic, copy) NSString * hostName; // default 'PressDisplay.com'
 @property (nonatomic, copy) NSString * appStoreID; // default '313904711'
-
-- (void)launchPressReader:(CDVInvokedUrlCommand*)command;
 
 + (instancetype) defaultAppLaunch;
 
@@ -32,7 +40,4 @@
 - (void) installApp;
 
 @end
-
-
-
 

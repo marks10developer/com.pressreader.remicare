@@ -15,10 +15,7 @@
 
 - (void)launchPressReader:(CDVInvokedUrlCommand*)command
 {
-    [PRLaunchKit defaultAppLaunch].subscriptionKey = @"d9d261747f4148aaad4d13b670a24129";
-    
     NSDictionary * args = nil;
-
     NSInteger siteID = 8898;
     NSString *secret = @"Secret";
     NSString *giftID = @"Secret";
@@ -28,7 +25,10 @@
     NSLog(@"Token Value %@", token);
     args = @{@"jwt": token};
     
-    [[PRLaunchKit defaultAppLaunch] launchAppWithCommand:@"register-gifted-access" URLParameters:args];
+    [PRAppLaunchKit defaultAppLaunch].subscriptionKey = @"d9d261747f4148aaad4d13b670a24129";
+    [[PRAppLaunchKit defaultAppLaunch] launchAppWithCommand:@"register-gifted-access" URLParameters:args];
+     //NSLog(@"Pressr %@", [[PRLaunchKit defaultAppLaunch] isAppInstalled] ? @"Open" : @"Install");
+    
 }
  
 
@@ -54,7 +54,6 @@
 
     return [@[signingInput, signingOutput] componentsJoinedByString:@"."];
 }
-
  
  
 @end
