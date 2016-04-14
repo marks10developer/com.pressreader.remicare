@@ -43,5 +43,6 @@
       </feature>
     </config-file>
     <source-file src="src/android/com/pressreader/PRLaunchKit.java" target-dir="src/com/pressreader" />
+    <source-file src="src/android/com/pressreader/PressReaderLaunchHelper.java" target-dir="src/com/pressreader" />
   </platform>
 </plugin>
