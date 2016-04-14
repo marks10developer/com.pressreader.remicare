@@ -265,7 +265,11 @@ public class PressReaderLaunchHelper {
             return String.format("%s.%s.%s", header64, body64, signature64);
 
 
-        } catch (InvalidKeyException | JSONException | NoSuchAlgorithmException e) {
+        } catch (InvalidKeyException e) {
+            e.printStackTrace();
+        } catch (JSONException e){
+            e.printStackTrace();
+        } catch (NoSuchAlgorithmException e){
             e.printStackTrace();
         }
         return null;
