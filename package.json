@@ -4,9 +4,13 @@
     "cordova_name": "PressReader",
     "description": "Pressreader library for remicare",
     "license": "MIT",
-    "keywords": [],
+    "keywords": [
+        "cordova",
+        "pressreader"
+    ],
     "platforms": [
-        "ios"
+        "ios",
+        "android"
     ],
     "engines": [
         {
