@@ -19,7 +19,7 @@ public class PRLaunchKit extends CordovaPlugin {
       JSONObject result = new JSONObject();
     
       result.put("mnc", 1);
-
+ 
       callbackContext.success(result);
 
       return true;
