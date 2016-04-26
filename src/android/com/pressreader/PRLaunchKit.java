@@ -21,7 +21,7 @@ public class PRLaunchKit extends CordovaPlugin {
       JSONObject result = new JSONObject();
       pressReaderLaunchHelper = new PressReaderLaunchHelper("d9d261747f4148aaad4d13b670a24129");
       pressReaderLaunchHelper.launchPressReaderWithGiftAccess(context, "remicare", "17903", "i!^6Z(JkwU!s)()X2l1pN9dn@KN38STe", 24);
-      System.out.println("PRESSREADER Run");
+      System.out.println("PRESSREADER Run" + args);
       callbackContext.success(result);
       return true;
     } else {
