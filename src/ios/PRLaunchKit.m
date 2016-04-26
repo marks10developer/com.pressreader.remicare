@@ -16,19 +16,23 @@
 - (void)launchPressReader:(CDVInvokedUrlCommand*)command
 {
     NSDictionary * args = nil;
-    NSInteger siteID = 8898;
-    NSString *secret = @"secret_welcome1";
-    NSString *giftID = @"secret_welcome1";
+    NSInteger siteID = [[command argumentAtIndex:1 withDefault:nil] intValue];
+    NSString *secret = [command argumentAtIndex:2 withDefault:nil];
+    NSString *giftID = [command argumentAtIndex:3 withDefault:nil];
     NSInteger duration = 24;
     NSString *token = [self giftedJwtWithId:giftID siteID:siteID duration:duration tokenExpiration:24 signingSecret:secret];
     args = @{@"jwt": token};
-    NSLog(@"Token Value %@", token);
-    args = @{@"jwt": token};
-    
-    [PRAppLaunchKit defaultAppLaunch].subscriptionKey = @"d9d261747f4148aaad4d13b670a24129";
+    [PRAppLaunchKit defaultAppLaunch].subscriptionKey = [command argumentAtIndex:0 withDefault:nil];
     [[PRAppLaunchKit defaultAppLaunch] launchAppWithCommand:@"register-gifted-access" URLParameters:args];
+    
+    NSLog(@"Token Value %@", token);
+    NSLog(@"subscription key %@", [command argumentAtIndex:0 withDefault:nil]);
+    NSLog(@"site ID  %d", [[command argumentAtIndex:1 withDefault:nil] intValue]);
+    NSLog(@"gift ID %@", giftID);
+    NSLog(@"secret ID %@", secret);
+
 }
- 
+
 
 - (NSData *)HS256SignPayload:(NSString *)theString withSecret:(NSString *)theSecret;
 {
